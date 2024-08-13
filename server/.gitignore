@@ -7,7 +7,3 @@ controllers/
 libs/
 models/
 middlewares/
-
-config.js
-db.js
-index.js
