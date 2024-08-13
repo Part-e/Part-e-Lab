@@ -29,10 +29,10 @@ dist-ssr
 # Environment variables
 .env
 
-/src/api/auth.js
-/src/api/tasks.js
-/src/assets/
-/src/context/
-/src/routes/
-/src/components/
-/src/ProtectedRoute.jsx
+# /src/api/auth.js
+# /src/api/tasks.js
+# /src/assets/
+# /src/context/
+# /src/routes/
+# /src/components/
+# /src/ProtectedRoute.jsx

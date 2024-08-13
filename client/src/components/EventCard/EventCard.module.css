@@ -1,0 +1,65 @@
+.container {
+    border: 1px solid #ccc; /* Cambia #ccc por el color de borde deseado */
+    border-radius: 10px;
+}
+
+.containerButtons{
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.host{
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.containerButtons button {
+    margin-right: 10px;
+    font-size: 13px;
+}
+  
+.containerButtons button:last-child {
+    margin-right: 0;
+}
+
+.detailsButton, .editButton{
+    color: #fff;
+}
+
+.deleteButton{
+    color: var(--error-message-color);
+}
+
+@media (max-width: 820px) {
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .pin {
+        font-size: 14px;
+    }
+
+    .containerButtons button {
+        font-size: var(--tablet-font-size);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardTitle {
+        font-size: 16px;
+    }
+
+    .pin {
+        font-size: 12px;
+    }
+
+    .containerButtons button {
+        font-size: var(--phone-font-size);
+        margin-right: 5px;
+    }
+}
