@@ -28,8 +28,8 @@ export const TaskProvider = ({ children }) => {
 
     const createTask = async (task) => {
         try {
-            const res = await createTasksRequest(task);
-            console.log(res);
+            await createTasksRequest(task);
+            // console.log(res);
         } catch (error) {
             setErrors([error.response.data.message]);
             throw error;
@@ -58,8 +58,8 @@ export const TaskProvider = ({ children }) => {
 
     const updateTask = async (id, task) => {
         try {
-            const res = await updateTasksRequest(id, task);
-            console.log(res);
+            await updateTasksRequest(id, task);
+            // console.log(res);
         } catch (error) {
             console.log(error);
         }

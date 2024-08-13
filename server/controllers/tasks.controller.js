@@ -49,7 +49,7 @@ export const updateTask = async (req, res) => {
 
 export const deleteTask = async (req, res) => {
     try {
-        console.log(req.params.id);
+        // console.log(req.params.id);
         const task = await Task.findByIdAndDelete(req.params.id);
 
         if (!task) return res.status(404).json({message: 'Invitación no encontrada'});
