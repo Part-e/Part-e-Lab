@@ -1,9 +1,2 @@
 node_modules
 .env
-
-schemas/
-routes/
-controllers/
-libs/
-models/
-middlewares/
