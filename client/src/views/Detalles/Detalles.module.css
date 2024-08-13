@@ -1,0 +1,148 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 30px 0;
+}
+
+.pageTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--normal-title-size);
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.text{
+    margin: 0 0 20px 0;
+    font-size: var(--normal-text-size);
+}
+
+.form{
+    width: 600px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-font-size);
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.normalInput, .label textarea, .smallInput {
+    width: 500px;
+    padding: 7px;
+    border: var(--input-border);
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+}
+
+.normalInput{
+    width: 300px;
+}
+
+.smallInput {
+    width: auto;
+}
+
+.pin{
+    width: 100px;
+    text-align: center;
+    padding: 7px;
+    border: var(--input-border);
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+}
+
+.label textarea {
+    height: 200px;
+}
+
+.label:first-of-type {
+    margin-top: 0;
+}
+
+.label:last-of-type {
+    margin-bottom: 20px;
+}
+
+.descriptiveText{
+    margin: 0 0 5px 0;
+    font-size: var(--normal-message-size);
+}
+
+@media (max-width: 768px) {
+    .container {
+      padding: 0 60px; 
+    }
+
+    .smallInput {
+      width: 25%; 
+    }
+    
+    .label textarea {
+        width: 400px; 
+    }
+    
+    .normalInput {
+        width: 300px;
+    }
+
+    .pin{
+        width: 70px;
+    }
+  
+    .pageTitle {
+      font-size: var(--tablet-title-size); 
+    }
+  
+    .text{
+      font-size: var(--tablet-text-size);
+    }
+    
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .createButton, .cleanButton {
+        font-size: var(--tablet-font-size);
+    }
+
+    .descriptiveText {
+        font-size: var(--tablet-message-size);
+    }
+}
+  
+@media (max-width: 480px) {
+    .container {
+        padding: 0 30px; 
+    }
+  
+    .pageTitle {
+      font-size: var(--phone-title-size);
+    }
+  
+    .text{
+      font-size: var(--phone-text-size);
+    }
+
+    .form, .normalInput, .label textarea, .mapBoxContainer {
+        width: 100%;
+    }
+
+    .pin{
+        width: 90px;
+    }
+
+    .smallInput{
+        width: 130px;
+    }
+
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .createButton, .cleanButton {
+        font-size: var(--phone-font-size);
+    }
+  
+    .descriptiveText {
+      font-size: var(--phone-message-size);
+    }
+}

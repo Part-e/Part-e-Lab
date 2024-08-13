@@ -1,0 +1,96 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: var(--normal-title-size);
+  margin: 20px 0 0 0 ;
+  color: var(--primary-color);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--normal-font-size);
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.label input{
+  padding: 7px;
+  border: var(--input-border);
+  border-radius: 5px;
+  font-size: var(--normal-font-size);
+}
+
+.politica{
+  margin:  0;
+  font-size: var(--normal-message-size);
+}
+
+.containerButtons{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerButtons button{
+  font-size: var(--normal-font-size);
+  width: auto;
+  margin: 20px 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 20px;
+  }
+
+  .pageTitle {
+    font-size: var(--tablet-title-size);
+  }
+
+  .label, .label input {
+    font-size: var(--tablet-font-size);
+  }
+
+  .politica {
+    font-size: var(--tablet-message-size);
+  }
+
+  .containerButtons button {
+    font-size: var(--tablet-font-size);
+    margin: 10px 5px; /* Reduce el margen entre botones */
+  }
+}
+  
+@media (max-width: 480px) {
+  .container {
+    margin-bottom: 15px;
+  }
+
+  .pageTitle {
+    font-size: var(--phone-title-size);
+  }
+
+  .label, .label input {
+    font-size: var(--phone-font-size);
+  }
+
+  .politica {
+    font-size: var(--phone-message-size);
+  }
+
+  .containerButtons button {
+    font-size: var(--phone-font-size);
+    margin: 10px 2px; 
+  }
+}

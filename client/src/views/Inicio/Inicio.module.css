@@ -1,0 +1,35 @@
+/* Evita el movimiento entre el cambio de páginas */
+html { 
+  overflow-y: scroll;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-size: 32px;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: var(--tablet-title-size);
+  }
+}
+  
+@media (max-width: 480px) {
+  .container {
+    height: 70vh; 
+  }
+
+  .pageTitle {
+    font-size: var(--phone-title-size);
+  }
+}

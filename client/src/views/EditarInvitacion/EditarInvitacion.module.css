@@ -1,0 +1,181 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 30px 0;
+}
+
+.pageTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--normal-title-size);
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.text{
+    margin: 0 0 20px 0;
+    font-size: var(--normal-text-size);
+}
+
+.form{
+    width: 600px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-font-size);
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.normalInput, .label textarea, .smallInput {
+    width: 500px;
+    padding: 7px;
+    border: var(--input-border);
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+}
+
+.normalInput{
+    width: 300px;
+}
+
+.smallInput {
+    width: auto;
+}
+
+.label textarea {
+    height: 200px;
+}
+
+.label:first-of-type {
+    margin-top: 0;
+}
+
+.label:last-of-type {
+    margin-bottom: 20px;
+}
+
+.descriptiveText{
+    margin: 0 0 5px 0;
+    font-size: 12px;
+}
+
+.mapBoxContainer {
+    width: 100%; 
+    max-width: 500px; 
+    margin: 5px 0 0 0;
+}
+
+.labelCheck {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+}
+
+.saveButton, .cleanButton, .cancelButton {
+    font-size: var(--normal-font-size);
+    width: auto;
+    margin: 20px 10px;
+}
+
+.saveButton {
+    color: var(--accept-message-color);
+}
+
+.cancelButton {
+    color: var(--error-message-color);
+}
+
+.errorMessage {
+    color: var(--error-message-color);
+    font-size: var(--normal-message-size);
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 60px; 
+    }
+    
+    .pageTitle {
+        font-size: var(--tablet-title-size);
+    }
+  
+    .smallInput{
+        width: 170px;
+    }
+
+    .label textarea {
+        width: 400px; 
+    }
+
+    .normalInput {
+        width: 300px;
+    }  
+
+    .text{
+        font-size: var(--tablet-text-size);
+    }
+  
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .saveButton, .cleanButton, .cancelButton {
+        font-size: var(--tablet-font-size);
+    }
+
+    .descriptiveText, .errorMessage {
+        font-size: var(--tablet-message-size);
+    }
+}
+  
+@media (max-width: 480px) {
+    .container {
+        padding: 0 30px;
+    }
+    
+    .pageTitle {
+        font-size: var(--phone-title-size);
+    }  
+
+    .smallInput{
+        width: 150px;
+    }
+
+    .label textarea {
+        width: 325px; 
+    }
+
+    .normalInput {
+        width: 200px;
+    }  
+
+    .text{
+        font-size: var(--phone-text-size);
+    }
+  
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .saveButton, .cleanButton, .cancelButton {
+        font-size: var(--phone-font-size);
+    }
+
+    .descriptiveText, .errorMessage {
+        font-size: var(--phone-message-size);
+    }
+
+    .form, .mapBoxContainer {
+        width: 100%; 
+    }    
+
+    .mapBoxContainer {
+        margin: 5px 0; 
+    }
+  
+    .saveButton, .cleanButton, .cancelButton {
+        margin: 10px 5px; 
+    }
+}

@@ -1,0 +1,97 @@
+.containerForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: var(--normal-title-size);
+  margin: 20px 0;
+  color: var(--primary-color);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--normal-font-size);
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.label input {
+  width: 250px;
+  padding: 7px;
+  border: var(--input-border);
+  border-radius: 5px;
+  font-size: var(--normal-font-size);
+}
+
+.button{
+  width: auto;
+  font-size: var(--normal-font-size);
+  margin: 0 0 15px 0;
+}
+
+.forgotPassword, .signUp{
+  font-size: var(--normal-font-size);
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.errorMessage{
+  font-size: var(--normal-message-size);
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+  color: var(--error-message-color)
+}
+
+@media (max-width: 768px) {
+  .containerForm {
+    padding: 20px;
+    height: auto;
+    min-height: 90vh;
+  }
+
+  .pageTitle {
+    font-size: var(--tablet-title-size);
+  }
+
+  .label input {
+    width: 200px; 
+    font-size: var(--tablet-font-size); 
+  }
+
+  .label, .forgotPassword, .signUp, .button {
+    font-size: var(--tablet-font-size); 
+  }
+}
+  
+@media (max-width: 480px) {
+  .containerForm {
+    padding: 10px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .pageTitle {
+    font-size: var(--phone-title-size)
+  }
+
+  .label input {
+    width: 100%; 
+    box-sizing: border-box; 
+    font-size: var(--phone-font-size);
+  }
+
+  .label, .forgotPassword, .signUp, .button {
+    font-size: var(--phone-font-size); 
+  }
+}

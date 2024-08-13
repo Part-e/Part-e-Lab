@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.pageTitle {
+    font-size: var(--normal-title-size);
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+.text {
+    font-size: var(--normal-text-size);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .pageTitle {
+        font-size: var(--tablet-title-size); /* Reduce el tamaño de la fuente para el título en tabletas */
+    }
+
+    .text {
+        font-size: var(--tablet-text-size); /* Ajusta el tamaño de la fuente para el texto en tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .pageTitle {
+        font-size: var(--phone-title-size); /* Reduce aún más el tamaño de la fuente para el título en teléfonos */
+    }
+
+    .text {
+        font-size: var(--phone-text-size); /* Ajusta el tamaño de la fuente para el texto en teléfonos */
+    }
+}

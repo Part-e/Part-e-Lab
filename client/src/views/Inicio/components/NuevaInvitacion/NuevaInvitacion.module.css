@@ -1,0 +1,177 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pageTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--normal-title-size);
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+.text{
+    margin: 0 0 20px 0;
+    font-size: var(--normal-text-size);
+}
+
+.form{
+    width: 600px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--normal-font-size);
+    margin: 30px 0;
+    font-weight: 600;
+}
+
+.normalInput, .label textarea, .smallInput {
+    width: 500px;
+    padding: 7px;
+    border: var(--input-border);
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+    font-family: var(--font-family);
+}
+
+.normalInput{
+    width: 300px;
+}
+
+.smallInput {
+    width: auto;
+}
+
+.pin {
+    width: 100px;
+    text-align: center;
+    padding: 7px;
+    border: var(--input-border);
+    border-radius: 5px;
+    font-size: var(--normal-font-size);
+    font-family: var(--font-family);
+}
+
+.pinButton {
+    font-size: var(--normal-font-size);
+    margin: 10px 0 0 0;
+}
+
+.label textarea {
+    height: 200px;
+}
+
+.label:first-of-type {
+    margin-top: 0;
+}
+
+.label:last-of-type {
+    margin-bottom: 20px;
+}
+
+.descriptiveText{
+    margin: 0 0 5px 0;
+    font-size: var(--normal-message-size);
+}
+
+.mapBoxContainer {
+    width: 100%; 
+    max-width: 500px;
+    margin: 5px 0 0 0; 
+}
+
+.labelCheck {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+}
+
+.createButton, .cleanButton {
+    font-size: var(--normal-font-size);
+    width: auto;
+    margin: 20px 10px;
+}
+
+.createButton {
+    color: var(--success-message-color);
+}
+
+.errorMessage {
+    color: var(--error-message-color);
+    font-size: var(--normal-message-size);
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .form, .normalInput, .label textarea, .mapBoxContainer {
+        width: 90%; 
+    }
+  
+    .pin {
+        width: 100px; 
+        padding: 7px;
+    }
+
+    .text{
+        font-size: var(--tablet-text-size);
+    }
+
+    .pageTitle {
+        font-size: var(--tablet-title-size);
+    }
+
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .createButton, .cleanButton {
+        font-size: var(--tablet-font-size);
+    }
+
+    .descriptiveText, .errorMessage {
+        font-size: var(--tablet-message-size);
+    }
+}
+  
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px; 
+    }
+    
+    .pageTitle {
+        font-size: var(--phone-title-size);
+    }  
+  
+    .form, .normalInput, .label textarea, .mapBoxContainer {
+        width: 100%; 
+    }    
+
+    .text {
+        font-size: var(--phone-text-size);
+    }
+  
+    .pin {
+        width: 100px; 
+        padding: 5px;
+    }
+
+    .mapBoxContainer {
+        width: 100%; 
+        max-width: none; 
+        margin: 5px 0; 
+    }
+
+    .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .createButton, .cleanButton {
+        font-size: var(--phone-font-size);
+    }
+
+    .descriptiveText, .errorMessage {
+        font-size: var(--phone-message-size);
+    }
+}

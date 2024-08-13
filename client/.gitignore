@@ -35,5 +35,4 @@ dist-ssr
 /src/context/
 /src/routes/
 /src/components/
-/src/views/
 /src/ProtectedRoute.jsx

@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+  
+.pageTitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 20px 0;
+  color: var(--primary-color);
+}
+
+.text{
+  font-size: var(--normal-text-size);
+}
+
+/* Estilos para tablets */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 10px;
+  }
+
+  .pageTitle {
+    font-size: 10px; /* Reduce el tamaño de la fuente para tablets */
+    margin: 10px 0;
+  }
+
+  .text{
+    font-size: var(--tablet-text-size);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin-top: 5px;
+    padding: 0 25px; /* Añade un padding horizontal de 10px */
+  }
+
+  .pageTitle {
+    font-size: 8px; /* Reduce aún más el tamaño de la fuente para teléfonos */
+    margin: 5px 0;
+  }
+
+  .text{
+    font-size: var(--phone-text-size);
+  }
+}
