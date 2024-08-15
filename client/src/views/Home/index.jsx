@@ -9,7 +9,7 @@ const Home = () => {
 
             <div className={styles.container}>
                 <div className={styles.pageTitle}>
-                    <h1> Bienvenido a Part.e </h1>
+                    <h1> Bienvenido a Part.e (Lab) </h1>
                 </div>
                 
                 <p className={styles.text}> 
