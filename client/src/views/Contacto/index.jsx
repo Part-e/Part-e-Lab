@@ -10,10 +10,10 @@ const Contacto = () => {
     const backDir = id === '1' ? '/' : id === '2' ? '/Inicio' : '/';
     const containerClass = id === '2' ? `${styles.container} ${styles.specialStyle}` : styles.container;
     
-    const wa = 'whatsapp.svg';
-    const ig = 'instagram.svg';
-    const fb = 'facebook.svg';
-    const email = 'email.svg';
+    const wa = '/whatsapp.svg';
+    const ig = '/instagram.svg';
+    const fb = '/facebook.svg';
+    const email = '/email.svg';
 
     const handleCopy = () => {
         const email = 'part.emxteam@gmail.com';
