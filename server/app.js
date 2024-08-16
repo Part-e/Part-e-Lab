@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL.replace(/\/$/, ""),
+    origin: process.env.FRONTEND_URL,
     credentials: true
 })); //Permitir que todos los dominios se puedan comunicar
 app.use(morgan('dev'));
