@@ -13,7 +13,6 @@ const app = express();
 
 app.use(cors({
     origin: process.env.FRONTEND_URL,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
     credentials: true
 })); //Permitir que todos los dominios se puedan comunicar
 app.use(morgan('dev'));
