@@ -7,7 +7,7 @@
 
 .navbar button {
     margin-right: 20px;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .navbar button:hover {
@@ -41,7 +41,7 @@
     }
     .navbar button {
         margin: 0;
-        font-size: 12px;
+        font-size: 15px;
         flex: 0 0 auto; 
     }
 }
