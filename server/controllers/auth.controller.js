@@ -56,7 +56,12 @@ export const login = async (req, res) => {
         if(!isMatch) return res.status(400).json({message: 'Contraseña incorrecta'});
 
         const token = await createAccessToken({id: userFound._id})
-        res.cookie('token', token);
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'none', // Necesario para permitir la cookie en diferentes dominios
+            maxAge: 1000 * 60 * 60 * 24 * 7
+        });
 
         //Enviando datos utilizados en el frontend
         res.json({
