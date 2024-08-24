@@ -110,7 +110,7 @@
     }
   
     .smallInput{
-        width: 170px;
+        width: 35%;
     }
 
     .label textarea {
@@ -144,7 +144,7 @@
     }  
 
     .smallInput{
-        width: 150px;
+        width: 55%;
     }
 
     .label textarea {

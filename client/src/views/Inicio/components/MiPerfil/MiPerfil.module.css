@@ -89,8 +89,20 @@
     font-size: var(--phone-message-size);
   }
 
+  .containerButtons {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .containerButtons button {
     font-size: var(--phone-font-size);
-    margin: 10px 2px; 
+    margin: 5px 0px; 
+  }
+
+  .containerButtons button:last-child {
+    margin-bottom: 20px;
   }
 }

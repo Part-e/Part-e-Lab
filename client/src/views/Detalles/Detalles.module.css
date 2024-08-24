@@ -81,7 +81,7 @@
     }
 
     .smallInput {
-      width: 25%; 
+      width: 32%; 
     }
     
     .label textarea {
@@ -135,7 +135,7 @@
     }
 
     .smallInput{
-        width: 130px;
+        width: 52%;
     }
 
     .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .createButton, .cleanButton {
