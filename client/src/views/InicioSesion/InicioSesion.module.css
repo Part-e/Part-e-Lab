@@ -36,6 +36,7 @@
   width: auto;
   font-size: var(--normal-font-size);
   margin: 0 0 15px 0;
+  color: #FFFFFFD9;
 }
 
 .forgotPassword, .signUp{

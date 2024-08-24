@@ -54,7 +54,7 @@ const Detalles = () => {
             
                 <h2 className={styles.pageTitle}> Evento: {eventName} </h2>
 
-                <p className={styles.text}> Toda la información proporcionada en el siguiente formulario aparecerá en tu invitación. <br/> En caso de querer hacer modificaciones después de enviarlo, debes ir a la página Lista de eventos. </p>
+                <p className={styles.text}> Toda la información proporcionada en el siguiente formulario aparecerá en tu invitación. <br/> En caso de querer hacer modificaciones debes ir a la página Mis invitaciones. </p>
 
                 <form className={styles.form}>
                     <label className={styles.label}>
@@ -86,7 +86,7 @@ const Detalles = () => {
                         <p className={styles.descriptiveText}> Si tu evento no tiene una fecha de término, ignora el siguiente campo. </p>
 
                         Fin del evento (fecha y hora)
-                        <input type='datetime-local' className={styles.smallInput} {...register('endEvent')}/>
+                        <input type='datetime-local' className={styles.smallInput} {...register('endEvent')} readOnly/>
                     </label>
 
                     <label className={styles.label}>

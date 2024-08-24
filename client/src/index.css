@@ -66,6 +66,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   background-color: #1a1a1a;
+  color: #FFFFFFD9;
   cursor: pointer;
   transition: border-color 0.25s;
 }

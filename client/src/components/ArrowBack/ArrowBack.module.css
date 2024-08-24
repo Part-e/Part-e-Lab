@@ -1,25 +1,24 @@
 .arrowBackIcon{
-    position: absolute;
-    display: flex;
-    top: 40px; 
-    left: 40px;
-    font-size: 0.85rem;
+  position: absolute;
+  display: flex;
+  top: 40px; 
+  left: 40px;
+  font-size: var(--normal-font-size);
+  color: #FFFFFFD9;
 }
 
 @media (max-width: 768px) {
-    /* Estilos para tabletas */
-    .arrowBackIcon {
-      top: 20px;
-      left: 20px;
-      font-size: 0.75rem; /* Reduce el tamaño de la fuente */
-    }
+  .arrowBackIcon {
+    top: 20px;
+    left: 20px;
+    font-size: var(--tablet-font-size);
+  }
 }
   
 @media (max-width: 480px) {
-    /* Estilos para teléfonos */
-    .arrowBackIcon {
-      top: 30px;
-      left: 30px;
-      font-size: 0.65rem; /* Reduce aún más el tamaño de la fuente */
-    }
+  .arrowBackIcon {
+    top: 30px;
+    left: 30px;
+    font-size: var(--phone-font-size);
+  }
 }

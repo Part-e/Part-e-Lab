@@ -143,6 +143,6 @@
     }
   
     .descriptiveText {
-      font-size: var(--phone-message-size);
+        font-size: var(--phone-message-size);
     }
 }
