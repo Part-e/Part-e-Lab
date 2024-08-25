@@ -25,7 +25,7 @@
   }
 
   .pageTitle {
-    font-size: 10px; /* Reduce el tamaño de la fuente para tablets */
+    font-size: 10px; 
     margin: 10px 0;
   }
 
@@ -37,11 +37,11 @@
 @media (max-width: 480px) {
   .container {
     margin-top: 5px;
-    padding: 0 25px; /* Añade un padding horizontal de 10px */
+    padding: 0 25px;
   }
 
   .pageTitle {
-    font-size: 8px; /* Reduce aún más el tamaño de la fuente para teléfonos */
+    font-size: 8px; 
     margin: 5px 0;
   }
 

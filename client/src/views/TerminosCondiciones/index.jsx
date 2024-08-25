@@ -7,7 +7,7 @@ const TerminosCondiciones = () => {
         <div className={styles.container}>
             <ArrowBack dir='/Inicio/MisInvitaciones'/>
 
-            <h2 className={styles.pageTitle}>Terminos y Condiciones</h2>
+            <h2 className={styles.pageTitle}>Terminos y condiciones</h2>
 
             <div className={styles.section}>
                 <h3 className={styles.sectionName}>Sección 1: Creando una invitación </h3>

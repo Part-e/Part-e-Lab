@@ -119,11 +119,11 @@
     }
   
     .pageTitle {
-      font-size: var(--phone-title-size);
+        font-size: var(--phone-title-size);
     }
   
     .text{
-      font-size: var(--phone-text-size);
+        font-size: var(--phone-text-size);
     }
 
     .form, .normalInput, .label textarea, .mapBoxContainer {

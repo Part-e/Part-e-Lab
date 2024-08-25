@@ -143,20 +143,16 @@
         font-size: var(--phone-title-size);
     }  
 
-    .smallInput{
-        width: 55%;
-    }
-
-    .label textarea {
-        width: 325px; 
-    }
-
-    .normalInput {
-        width: 200px;
-    }  
-
     .text{
         font-size: var(--phone-text-size);
+    }
+
+    .form, .normalInput, .label textarea, .mapBoxContainer {
+        width: 100%;
+    }
+
+    .smallInput{
+        width: 55%;
     }
   
     .label, .normalInput, .label textarea, .smallInput, .pin, .pinButton, .saveButton, .cleanButton, .cancelButton {

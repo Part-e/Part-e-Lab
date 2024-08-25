@@ -95,8 +95,12 @@ ul li{
 }
   
 @media (max-width: 480px) {
-  .container, .specialStyle {
+  .container {
     margin: 40px 40px; 
+  }
+
+  .specialStyle {
+    margin: 0px 40px; 
   }
 
   .pageTitle {
@@ -108,7 +112,7 @@ ul li{
   }
 
   .horario h3{
-    font-size: 12px;
+    font-size: 18px;
   }
 
   .text, ul li{
