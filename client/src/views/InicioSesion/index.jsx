@@ -28,6 +28,16 @@ const InicioSesion = () => {
         }
     }, [isAuthenticated]);
 
+    // Detectar cuándo el teclado está visible
+    window.addEventListener('resize', function() {
+        const containerForm = document.querySelector('.containerForm');
+        if (window.innerHeight < 500) { // Ajusta este valor según sea necesario
+            containerForm.classList.add('no-scroll');
+        } else {
+            containerForm.classList.remove('no-scroll');
+        }
+    });
+
     return (
         <div>
             <ArrowBack dir='/' />
