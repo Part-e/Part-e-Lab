@@ -28,6 +28,20 @@ const InicioSesion = () => {
         }
     }, [isAuthenticated]);
 
+    // Ajustar la altura del contenedor cuando el teclado aparece y desaparece
+    function adjustContainerHeight() {
+        const container = document.querySelector('.containerForm');
+        if (container) {
+        container.style.minHeight = `${window.innerHeight}px`;
+        }
+    }
+    
+    // Escuchar eventos de cambio de tamaño de la ventana
+    window.addEventListener('resize', adjustContainerHeight);
+    
+    // Ajustar la altura del contenedor al cargar la página
+    document.addEventListener('DOMContentLoaded', adjustContainerHeight);
+
     return (
         <div>
             <ArrowBack dir='/' />
