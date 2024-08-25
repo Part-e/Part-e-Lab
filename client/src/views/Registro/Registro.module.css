@@ -87,8 +87,8 @@ input[type='number']::-webkit-outer-spin-button {
   
 @media (max-width: 480px) {
   .containerForm {
-    padding: 10px;
-    /* min-height: 90vh; */
+    padding: 0 10px;
+    min-height: 85vh;
   }
 
   .pageTitle {
@@ -96,7 +96,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .label input {
-    width: 60%; 
+    width: 80%; 
     box-sizing: border-box; 
     font-size: var(--phone-font-size);
   }
