@@ -31,7 +31,7 @@ const NavBar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <button className={styles.menuButton} onClick={toggleMenu}>MENÚ</button>
+            <button className={styles.menuButton} onClick={toggleMenu}>Menú</button>
             <div className={`${styles.menuItems} ${menuOpen ? styles.show : ''}`}>
                 {isInicio ? (
                     <>

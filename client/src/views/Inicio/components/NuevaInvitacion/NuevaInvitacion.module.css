@@ -74,7 +74,7 @@
 }
 
 .label:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .descriptiveText{
@@ -97,7 +97,7 @@
 .createButton, .cleanButton {
     font-size: var(--normal-font-size);
     width: auto;
-    margin: 20px 10px;
+    margin: 0px 10px 10px 10px;
 }
 
 .createButton {

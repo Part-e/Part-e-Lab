@@ -1,9 +1,16 @@
+html, body {
+  height: 100%;
+  overflow: hidden; /* Evita el desplazamiento de la página */
+}
+
 .containerForm{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  overflow: auto; /* Permite el desplazamiento interno si es necesario */
 }
 
 .pageTitle {

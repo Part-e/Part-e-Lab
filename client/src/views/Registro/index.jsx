@@ -89,7 +89,7 @@ const Registro = () => {
                         {passwordsMatch && <p className={styles.passMatch}>Las contraseñas coinciden</p>}
                     </label>
 
-                    <p className={styles.aviso}> Dando click al boton Crear cuenta, estás de acuerdo con el <a href={'/AvisoPrivacidad'}> Aviso de privacidad</a></p>
+                    <p className={styles.aviso}> Dando click al boton Crear cuenta, estás de acuerdo con el <a href={'/AvisoPrivacidad'} target="_blank" rel="noopener noreferrer"> Aviso de privacidad</a></p>
                     
                     <button type="submit" className={styles.submitButton}> Crear cuenta </button>
                 </form>
