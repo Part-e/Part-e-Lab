@@ -4,11 +4,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
-}
-
-.no-scroll{
-  overflow: hidden;
 }
 
 .pageTitle {
@@ -35,6 +30,10 @@
   border: var(--input-border);
   border-radius: 5px;
   font-size: var(--normal-font-size);
+}
+
+.label input:focus {
+  outline: none;
 }
 
 .button{
