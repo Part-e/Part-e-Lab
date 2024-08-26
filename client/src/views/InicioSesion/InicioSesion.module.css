@@ -11,12 +11,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-height: 100dvh;
-  width: 100%;
+  min-height: 100%;
 }
 
 .pageTitle {
@@ -95,8 +90,8 @@ html, body {
 @media (max-width: 480px) {
   .containerForm {
     padding: 10px;
-    height: auto;
-    min-height: 100dvh
+    /* height: auto; */
+    /* min-height: 90vh; */
   }
 
   .pageTitle {
