@@ -29,7 +29,7 @@ const InicioSesion = () => {
     }, [isAuthenticated]);
 
     return (
-        <div className={styles.container}>
+        <div>
             <ArrowBack dir='/' />
             
             <div className={styles.containerForm}>
