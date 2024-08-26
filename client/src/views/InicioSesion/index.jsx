@@ -28,6 +28,14 @@ const InicioSesion = () => {
         }
     }, [isAuthenticated]);
 
+    window.addEventListener('resize', () => {
+        if (window.innerHeight < 500) {  // Cambia 500 a un valor adecuado para tu diseño
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+    });
+
     return (
         <div>
             <ArrowBack dir='/' />
