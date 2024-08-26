@@ -11,18 +11,15 @@
     }
   ],
 
-  "routes": [
-    { 
-      "src": "/[^.]+", 
-      "dest": "/", 
-      "status": 200 
-    }
-  ], 
-
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "/api/:path*"
+    },
+
+    {
+      "source": "/(.*)", 
+      "destination": "/index.html"
     }
   ]
 }
