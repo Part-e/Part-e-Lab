@@ -17,7 +17,7 @@ const MisInvitaciones = () => {
             <h2 className={styles.pageTitle}> Mis invitaciones </h2>
 
             <div className={styles.terminos}>
-                <a href="/TerminosCondiciones" > Términos y condiciones de las invitaciones </a>
+                <a href="/TerminosCondiciones" target="_blank" rel="noopener noreferrer"> Términos y condiciones de las invitaciones </a>
             </div>
             
             <div className={styles.eventCard}>

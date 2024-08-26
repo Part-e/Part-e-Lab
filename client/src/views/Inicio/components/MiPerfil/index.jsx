@@ -60,7 +60,7 @@ const Perfil = () => {
             </div>
 
             <div className={styles.politica}>
-                <a href="/AvisoPrivacidad" > Aviso de privacidad </a>
+                <a href="/AvisoPrivacidad" target="_blank" rel="noopener noreferrer"> Aviso de privacidad </a>
             </div>
 
         </div>
