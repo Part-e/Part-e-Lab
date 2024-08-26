@@ -1,3 +1,11 @@
+html, body {
+  overflow: hidden;
+}
+
+/* html, body {
+  overflow-y: auto;
+} */
+
 .containerForm{
   display: flex;
   flex-direction: column;
