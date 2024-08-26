@@ -83,7 +83,7 @@
   .containerForm {
     padding: 10px;
     height: auto;
-    min-height: calc(90vh - 50px); /* Ajusta 50px a lo que funcione mejor */
+    min-height: 100dvh
   }
 
   .pageTitle {
