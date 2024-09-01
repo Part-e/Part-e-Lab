@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import ArrowBack from '../../components/ArrowBack';
 
@@ -17,6 +17,7 @@ const InicioSesion = () => {
     
     let navigate = useNavigate();
     const { signin,  isAuthenticated, errors: signInErrors} = useAuth();
+    const [isKeyboardActive, setIsKeyboardActive] = useState(false);
 
     const handleFormSubmit = (data) => {
         signin(data);
@@ -28,19 +29,24 @@ const InicioSesion = () => {
         }
     }, [isAuthenticated]);
 
-    window.addEventListener('resize', () => {
-        if (window.innerHeight < 500) {  // Cambia 500 a un valor adecuado para tu diseño
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-    });
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerHeight < 500) { // Ajusta este valor según sea necesario
+                setIsKeyboardActive(true);
+            } else {
+                setIsKeyboardActive(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);    
 
     return (
         <div>
             <ArrowBack dir='/' />
             
-            <div className={styles.containerForm}>
+            <div className={`${styles.containerForm} ${isKeyboardActive ? styles['keyboard-active'] : ''}`}>
                 <h2 className={styles.pageTitle}> Iniciar sesión </h2>
 
                 {signInErrors.map((error, i) => (

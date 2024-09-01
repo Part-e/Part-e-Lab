@@ -90,8 +90,12 @@ html, body {
 @media (max-width: 480px) {
   .containerForm {
     padding: 10px;
-    /* height: auto; */
-    /* min-height: 90vh; */
+
+    transition: transform 0.3s ease; 
+  }
+  
+  .containerForm.keyboard-active {
+    transform: translateY(0%); /* Ajusta este valor según sea necesario */
   }
 
   .pageTitle {
