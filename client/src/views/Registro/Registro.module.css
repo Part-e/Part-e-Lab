@@ -52,6 +52,10 @@ input[type='number']::-webkit-outer-spin-button {
   font-size: var(--normal-message-size);
   font-weight: bold;
   margin: 10px 0 0 0;
+  /* position: absolute; */
+  /* top: 100%; */
+  /* left: 0; */
+  /* text-align: center; */
   text-transform: uppercase;
   color: var(--error-message-color);
 }
@@ -68,7 +72,7 @@ input[type='number']::-webkit-outer-spin-button {
   .containerForm {
     padding: 20px;
     height: auto;
-    min-height: 90vh;
+    height: 95vh;
   }
   
   .pageTitle {
@@ -88,7 +92,6 @@ input[type='number']::-webkit-outer-spin-button {
 @media (max-width: 480px) {
   .containerForm {
     padding: 0 10px;
-    min-height: 85vh;
   }
 
   .pageTitle {
@@ -96,7 +99,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 
   .label input {
-    width: 80%; 
+    width: 100%; 
     box-sizing: border-box; 
     font-size: var(--phone-font-size);
   }

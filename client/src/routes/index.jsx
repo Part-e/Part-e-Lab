@@ -95,6 +95,11 @@ const router = createBrowserRouter([
                 path: 'EliminarCuenta/:id',
                 element: <EliminarCuenta/>,
                 errorElement: <Error404/>,
+            }, 
+            {
+                path: '/TerminosCondiciones',
+                element: <TerminosCondiciones/>,
+                errorElement: <Error404/>,
             }
         ]
     },
@@ -126,11 +131,6 @@ const router = createBrowserRouter([
     {
         path: '/AvisoPrivacidad',
         element: <AvisoPrivacidad/>,
-        errorElement: <Error404/>,
-    },
-    {
-        path: '/TerminosCondiciones',
-        element: <TerminosCondiciones/>,
         errorElement: <Error404/>,
     }
 ]);

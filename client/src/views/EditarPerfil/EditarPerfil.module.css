@@ -58,7 +58,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: var(--error-message-color);
   font-size: var(--normal-message-size);
   font-weight: bold;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   text-transform: uppercase;
 }
 

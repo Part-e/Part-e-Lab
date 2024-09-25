@@ -17,6 +17,7 @@ const EditarInvitacion = () => {
     const navigate = useNavigate();
     const startEvent = watch('startEvent');
     const [eventName, setEventName] = useState('');
+    const [infoLength, setInfoLength] = useState(0);
 
     function handleClean() {
         reset();
@@ -28,6 +29,11 @@ const EditarInvitacion = () => {
             updateTask(params.id, data);
             navigate("/Inicio/MisInvitaciones");
         }, 2000);
+    };
+
+    const handleInfoChange = (event) => {
+        const text = event.target.value;
+        setInfoLength(text.length);
     };
 
     useEffect(() => {
@@ -94,9 +100,13 @@ const EditarInvitacion = () => {
                     
                     <label className={styles.label}>
                         Información (Descripción del evento)*
-                        <textarea {...register('info', { required: "Descripción del evento requerida", maxLength: {value : 500}})} />
+                        <textarea {...register('info', { required: "Descripción del evento requerida", maxLength: {value : 500}})} onChange={handleInfoChange}/>
 
                         <p className={styles.errorMessage}> {errors.info?.message} </p>
+
+                        {infoLength > 500 && (
+                            <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                        )}
                     </label>
                     
                     <label className={styles.label}>
@@ -130,18 +140,26 @@ const EditarInvitacion = () => {
                     
                     <label className={styles.label}>
                         Menú
-                        <textarea type='text' className={styles.normalInput} {...register('menu', { maxLength: {value: 500} })} />
+                        <textarea type='text' className={styles.normalInput} {...register('menu', { maxLength: {value: 500} })} onChange={handleInfoChange}/>
+
+                        {infoLength > 500 && (
+                            <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                        )}
                     </label>
 
                     <label className={styles.label}>
                         Información importante (reglas, recomendaciones, etc.)
-                        <textarea type='text' {...register('importantInfo', { minLength: { value: 10}, maxLength: {value : 500}})} />
+                        <textarea type='text' {...register('importantInfo', { minLength: { value: 10}, maxLength: {value : 500}})} onChange={handleInfoChange}/>
+
+                        {infoLength > 500 && (
+                            <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                        )}
                     </label>
                     
                     <label className={styles.label}>
                         <div className={styles.labelCheck}>
                             <input type="checkbox" {...register('check', { required: "Debes aceptar los términos y condiciones" })} /> 
-                            <a href="/TerminosCondiciones"> Leí y acepto los términos y condiciones </a>
+                            <p> Leí y acepto los <a href="/TerminosCondiciones" target="_blank" rel="noopener noreferrer"> términos y condiciones </a> </p>
                         </div>
                         
                         <p className={styles.errorMessage}> {errors.check?.message} </p>

@@ -53,7 +53,7 @@ const Registro = () => {
 
                 <form onSubmit={handleSubmit(handleFormSubmit)}>
                     <label className={styles.label}>
-                        Nombre de usuario
+                        Nombre
                         <input type='text' {...register('username', { required: 'Nombre requerido'})}/>
 
                         <p className={styles.errorMessage}> {errors.username?.message} </p>
@@ -68,14 +68,23 @@ const Registro = () => {
                     
                     <label className={styles.label}>
                         Celular
-                        <input type='number' {...register('phoneNumber', { required: 'Número requerido', minLength: {value: 10, message: 'Deben ser 10 digítos'}})}/>
+                        <input type='tel' {...register('phoneNumber', { required: 'Número requerido', maxLength: {value: 10, message: 'Deben ser 10 digítos'}})}
+                        
+                        onInput={(e) => {
+                            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                            
+                            if (e.target.value.length > 10) {
+                              e.target.value = e.target.value.slice(0, 10);
+                            }
+                          }}
+                        />
                     
                         <p className={styles.errorMessage}> {errors.phoneNumber?.message} </p>
                     </label>
                     
                     <label className={styles.label}>
-                        Contraseña
-                        <input type='password' {...register('password', { required: 'Contraseña requerida', minLength: { value: 8, message: 'La contraseña debe tener al menos 8 caracteres' }})} />
+                        Contraseña (8 carácteres mínimo)
+                        <input type='password' {...register('password', { required: 'Contraseña requerida', minLength: { value: 8, message: 'Debe tener al menos 8 caracteres' }})} />
 
                         <p className={styles.errorMessage}> {errors.password?.message} </p>
                     </label>

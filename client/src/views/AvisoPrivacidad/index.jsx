@@ -37,7 +37,7 @@ const AvisoPrivacidad = () => {
                     </li>
 
                     <li>
-                        Cualquier cambio en el Aviso de privacidad será notificado a los usuarios a través de la plataforma y/o por correo electrónico.
+                        Cualquier cambio en el Aviso de privacidad será notificado a los usuarios a través de la plataforma, en la página <a href="/Inicio" target="_blank" rel="noopener noreferrer"> Inicio </a>, y/o por correo electrónico.
                     </li>
                 </ol>
             </p>

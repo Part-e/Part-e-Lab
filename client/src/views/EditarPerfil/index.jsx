@@ -54,30 +54,40 @@ const EditarPerfil = () => {
 
                 <form onSubmit={handleSubmit(handleFormSubmit)} className={styles.form}>
                     <label className={styles.label}>
-                        Nombre completo
+                        Nombre 
                         <input type="text" {...register('username', { required: 'Nombre requerido'})}/>
+                        <p className={styles.errorMessage}> {errors.username?.message} </p>  
                     </label>
-                    <p className={styles.errorMessage}> {errors.username?.message} </p>  
-
+                    
                     <label className={styles.label}>
                         Correo
                         <input type="email" {...register('email', { required: 'Email requerido'})}/>
+                        <p className={styles.errorMessage}> {errors.email?.message} </p>
                     </label>
-                    <p className={styles.errorMessage}> {errors.email?.message} </p>
                     
                     <label className={styles.label}>
                         Celular
-                        <input type="text" {...register('phoneNumber', { required: 'Número requerido', minLength: {value: 10, message: 'Deben ser 10 digítos'}})}/>
-                    </label>
-                    <p className={styles.errorMessage}> {errors.phoneNumber?.message} </p>
+                        <input type="tel" {...register('phoneNumber', { required: 'Número requerido', maxLength: {value: 10, message: 'Deben ser 10 digítos'}})}
+                        
+                        onInput={(e) => {
+                            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                            
+                            if (e.target.value.length > 10) {
+                              e.target.value = e.target.value.slice(0, 10);
+                            }
+                          }}
+                        />
 
+                        <p className={styles.errorMessage}> {errors.phoneNumber?.message} </p>
+                    </label>
+                    
                     <div className={styles.containerButtons}>
                         <button onClick={()=> navigate(`/Inicio/MiPerfil/${user.id}`)} type='button'> Cancelar </button>
                         <button type="submit"> Guardar cambios</button>
                     </div>
 
                     <div className={styles.politica}>
-                        <a href="/AvisoPrivacidad" > Aviso de privacidad </a>
+                        <a href="/AvisoPrivacidad" target="_blank" rel="noopener noreferrer"> Aviso de privacidad </a>
                     </div>
                 </form>
             </div>

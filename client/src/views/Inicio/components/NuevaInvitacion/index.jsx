@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTask } from '../../../../context/TasksContext';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +12,8 @@ import styles from './NuevaInvitacion.module.css';
 const NuevaInvitacion = () => {
     const { handleSubmit, register, reset, watch, setValue, formState: {errors}} = useForm();
     const { createTask, errors: taskErrors} = useTask();
+    const [infoLength, setInfoLength] = useState(0);
+    const [dateError, setDateError] = useState('');
     
     const startEvent = watch('startEvent');
     const navigate = useNavigate();
@@ -22,14 +24,23 @@ const NuevaInvitacion = () => {
     }
 
     const handleFormSubmit = async (data) => {
+        const { startEvent, endEvent } = data;
+
         try {
+            if (new Date(endEvent) < new Date(startEvent)) {
+                setDateError('La fecha de fin del evento no puede ser anterior a la fecha de inicio.');
+                toast.error('Error, revisa el formulario');
+                return;
+            }
+            setDateError('');
+
             await createTask(data);
             toast.success('Evento creado');
             setTimeout(() => {
                 navigate("/Inicio/MisInvitaciones");
             }, 2000);
         } catch (error) {
-            toast.error('Error al crear el evento');
+            toast.error('Error, revisa el formulario');
         }
     };
 
@@ -48,6 +59,11 @@ const NuevaInvitacion = () => {
         pin = `${year}${day}${month}${randomChars}`;
         setValue('pin', pin);
     }
+
+    const handleInfoChange = (event) => {
+        const text = event.target.value;
+        setInfoLength(text.length);
+    };
 
     useEffect(() => {
         if (startEvent) {
@@ -91,9 +107,13 @@ const NuevaInvitacion = () => {
                 
                 <label className={styles.label}>
                     Información (Descripción del evento)*
-                    <textarea {...register('info', { required: "Descripción del evento requerida", maxLength: {value : 500}})} />
+                    <textarea {...register('info', { required: "Descripción del evento requerida", maxLength: {value : 500}})} onChange={handleInfoChange}/>
 
                     <p className={styles.errorMessage}> {errors.info?.message} </p>
+
+                    {infoLength > 500 && (
+                        <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                    )}
                 </label>
                 
                 <label className={styles.label}>
@@ -108,6 +128,8 @@ const NuevaInvitacion = () => {
 
                     Fin del evento (fecha y hora)
                     <input type='datetime-local' className={styles.smallInput} {...register('endEvent')}/>
+
+                    {dateError && <p className={styles.errorMessage}>{dateError}</p>}
                 </label>
 
                 <label className={`${styles.label} ${styles.labelLocation}`}>
@@ -127,12 +149,20 @@ const NuevaInvitacion = () => {
                 
                 <label className={styles.label}>
                     Menú
-                    <textarea type='text' {...register('menu', { maxLength: {value : 500}})} />
+                    <textarea type='text' {...register('menu', { maxLength: {value : 500}})} onChange={handleInfoChange}/>
+
+                    {infoLength > 500 && (
+                        <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                    )}
                 </label>
 
                 <label className={styles.label}>
                     Información importante (reglas, recomendaciones, etc.)
-                    <textarea type='text' {...register('importantInfo', { maxLength: {value : 500}})} />
+                    <textarea type='text' {...register('importantInfo', { maxLength: {value : 500}})} onChange={handleInfoChange}/>
+
+                    {infoLength > 500 && (
+                        <p className={styles.errorMessage}> Deben ser 500 carácteres, tienes {infoLength}  </p>
+                    )}
                 </label>
                    
                 <label className={styles.label}>

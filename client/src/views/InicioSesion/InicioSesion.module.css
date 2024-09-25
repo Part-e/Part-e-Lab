@@ -1,17 +1,9 @@
-/* html, body {
-  overflow: hidden;
-} */
-
-html, body {
-  overflow-y: auto;
-}
-
 .containerForm{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
+  height: 100vh;
 }
 
 .pageTitle {
@@ -90,12 +82,6 @@ html, body {
 @media (max-width: 480px) {
   .containerForm {
     padding: 10px;
-
-    transition: transform 0.3s ease; 
-  }
-  
-  .containerForm.keyboard-active {
-    transform: translateY(0%); /* Ajusta este valor según sea necesario */
   }
 
   .pageTitle {
@@ -103,7 +89,7 @@ html, body {
   }
 
   .label input {
-    width: 100%; 
+    width: 120%; 
     box-sizing: border-box; 
     font-size: var(--phone-font-size);
   }

@@ -15,7 +15,7 @@ const TerminosCondiciones = () => {
                     <p>
                         <ol className={styles.alfabetica}>
                             <li>
-                                Al crear una invitación en la página <a href="/Inicio/NuevaInvitacion"> Nueva invitación</a>, se recopilará la siguiente información:
+                                Al crear una invitación en la página <a href="/Inicio/NuevaInvitacion" target="_blank" rel="noopener noreferrer"> Nueva invitación</a>, se recopilará la siguiente información:
                                 <ol>
                                     <li>Nombre del evento</li>
                                     <li>Nombre del anfitrión (host)</li>
@@ -25,22 +25,22 @@ const TerminosCondiciones = () => {
                                     <li>Menú</li>
                                     <li>Información importante del evento (reglas, consideraciones, etc.)</li>
                                 </ol>
-                                De los puntos anteriores, la información obligatoria son los puntos 1, 2, 3, 4 (únicamente la fecha y hora de inicio) y 5. Esta información es necesaria para la elaboración de la invitación. Cualquier otra información es opcional y queda a criterio del usuario si es necesaria o no para su invitación.
+                                De los puntos anteriores, la información obligatoria son los puntos 1, 2, 3, 4 (únicamente la fecha y hora de inicio) y 5. Esta información es necesaria para la elaboración de la invitación. Cualquier otra información es opcional y queda a criterio del usuario si es necesaria o no para su invitación. 
                             </li>
                             <li>
-                                Cualquier información que el usuario considere importante y no haya podido ser recopilada por la plataforma, puede ser agregada. Esto se explicará en la sección 2 punto C.
+                                Cualquier información que el usuario considere importante y no haya podido ser recopilada por la plataforma, puede ser agregada. Esto se explicará más a detalle en la sección 2 punto C.
                             </li>
                             <li>
-                                La invitación cuenta con un PIN que aparece al principio del formulario en la página <a href="/Inicio/NuevaInvitacion"> Nueva invitación</a>. Dicho PIN es necesario para que los invitados puedan acceder a la invitación, por lo que es responsabilidad del usuario compartir el PIN con los invitados.
+                                La invitación cuenta con un PIN que aparece al principio del formulario en la página <a href="/Inicio/NuevaInvitacion" target="_blank" rel="noopener noreferrer"> Nueva invitación</a>. Dicho PIN es necesario para que los invitados puedan acceder a la invitación (cuando ya esté subida en la plataforma), por lo que es responsabilidad del usuario compartir el PIN correctamente con los invitados.
                             </li>
                             <li>
-                                El acceso a la invitación por parte de los invitados solo podrá llevarse a cabo una vez que la invitación haya sido entregada al usuario y esta se encuentre disponible en la plataforma. Los invitados podrán acceder a la invitación en la página <a href="/Invitado">Invitado</a>.
+                                El acceso a la invitación por parte de los invitados solo podrá llevarse a cabo una vez que la invitación haya sido entregada al usuario y esta se encuentre disponible en la plataforma. Los invitados podrán acceder a la invitación en la página <a href="/Invitado" target="_blank" rel="noopener noreferrer">Invitado</a>.
                             </li>
                             <li>
                                 Los invitados no necesitarán de una cuenta en esta plataforma para acceder a cualquier invitación que se les haya compartido, solo necesitarán el PIN correspondiente.
                             </li>
                             <li>
-                                Part.e no se hace responsable de la información que el usuario decida compartir en la creación de su invitación, por lo que se recomienda no compartir información sensible en la creación de un evento.
+                                Part.e no se hace responsable de la información que el usuario decida compartir en la creación de su invitación, por lo que se recomienda no compartir información sensible en la creación de una invitación.
                             </li>
                             <li>
                                 Part.e se reserva el derecho de negar el servicio a cualquier usuario cuya invitación contenga información ofensiva, discriminatoria o que atente contra la salud e integridad de las personas.
@@ -56,13 +56,13 @@ const TerminosCondiciones = () => {
                     <p>
                         <ol className={styles.alfabetica}>
                             <li>
-                                Después de que el usuario haya respondido y enviado el formulario que se encuentra en la página <a href="/Inicio/NuevaInvitacion"> Nueva invitación</a> un miembro del equipo de Part.e (que se identificará ante el usuario) se pondrá en contacto con el usuario (por medio del correo electrónico o número telefónico del usuario proporcionados por el mismo al momento de registrarse en la plataforma) para acordar una fecha y hora en la que se puedan reunir por medio de una videollamada. Si el usuario considera que la videollamada no es necesaria, puede solicitar que toda la comunicación se realice por medio del correo electrónico o chat de Whatsapp. 
+                                Después de que el usuario haya respondido y enviado el formulario que se encuentra en la página <a href="/Inicio/NuevaInvitacion" target="_blank" rel="noopener noreferrer"> Nueva invitación</a> un miembro del equipo de Part.e (que se identificará ante el usuario) se pondrá en contacto con el usuario (por medio del correo electrónico o número telefónico que el usuario proporcionó al momento de registrarse en la plataforma) para acordar una fecha y hora en la que se puedan reunir por medio de una videollamada. Si el usuario considera que la videollamada no es necesaria, puede solicitar que toda la comunicación se realice por medio del correo electrónico o chat de Whatsapp. 
                             </li>
                             <li>
                                 La reunión mencionada en el punto anterior (sea o no sea llevada a cabo en una videollamada) será para acordar algunos detalles de la invitación, como el diseño, la fecha de entrega, el precio total de la invitación, el tiempo que la invitación dejará de estar disponible en la plataforma, los datos bancarios para realizar el pago y cualquier otro detalle que el miembro de Part.e o el usuario consideren necesarios aclarar.
                             </li>
                             <li>
-                                Con respecto al punto B de la sección 1, cualquier información que el usuario considere importante para su invitación y no haya sido recopilada en el formulario de la página <a href="/Inicio/NuevaInvitacion"> Nueva invitación</a> puede ser agregada siempre y cuando el usuario lo mencione en la reunión mencionada en el punto anterior.
+                                Con respecto al punto B de la sección 1, cualquier información que el usuario considere importante para su invitación y no haya sido recopilada en el formulario de la página <a href="/Inicio/NuevaInvitacion" target="_blank" rel="noopener noreferrer"> Nueva invitación</a> puede ser agregada siempre y cuando el usuario lo mencione en la reunión mencionada en el punto anterior.
                             </li>
                             <li>
                                 Con respecto al diseño, el usuario podrá elegir entre los diseños que Part.e tiene disponibles en la plataforma o podrá solicitar un diseño personalizado. En caso de solicitar un diseño personalizado, el usuario deberá proporcionar los detalles necesarios para la creación del diseño (colores, formas, imágenes, etc.).
@@ -77,7 +77,7 @@ const TerminosCondiciones = () => {
                                 En la fecha de entrega de la invitación, ambas partes deberán reunirse (por medio de una videollamada) para hacer la entrega visual de la invitación.
                             </li>
                             <li>
-                                En ningun momento (durante o antes de la reunión) se le pedirán al usuario datos bancarios o información sensible, si el usuario recibe una solicitud de este tipo, deberá reportarlo a Part.e al correo part.emxteam@gmail.com
+                                En ningun momento se le pedirán al usuario datos bancarios o información sensible, si el usuario recibe una solicitud de este tipo, deberá reportarlo a Part.e al correo part.emxteam@gmail.com
                             </li>
                         </ol>
                     </p>
@@ -102,7 +102,7 @@ const TerminosCondiciones = () => {
                             </li>
 
                             <li>
-                                El 50% restante se debe de pagar entre las 24 horas antes de la fecha de entrega acordada en la reunión mencionada en el punto B de la sección 2.
+                                El 50% restante se debe de pagar antes o durante la entrega de la invitación.
                             </li>
 
                             <li>
@@ -114,7 +114,7 @@ const TerminosCondiciones = () => {
                             </li>
 
                             <li>
-                                Si el usuario decide cancelar la creación de su invitación un día (24 horas) antes de la fecha de entrega acordada, el usuario no recibirá un reembolso del adelanto y solo se le cobrará el 30% restante del costo total de la invitación.
+                                Si el usuario decide cancelar la creación de su invitación antes de la fecha de entrega acordada, el usuario no recibirá un reembolso del adelanto y solo se le cobrará el 30% restante del costo total de la invitación.
                             </li>
                         </ol>
                     </p>
@@ -139,7 +139,7 @@ const TerminosCondiciones = () => {
                             </li>
 
                             <li>
-                                Si el usuario aprueba la invitación debe de realizar el pago del 50% restante. Una vez que el pago se vea reflejado, la invitación estará disponible en la plataforma y se le notificará al usuario que la invitación se encuentra disponible en la plataforma.
+                                Cuando el costo total de la invitación haya sido pagado, la invitación estará disponible en la plataforma y se le notificará al usuario que la invitación se encuentra disponible en la plataforma.
                             </li>
 
                             <li>
@@ -147,7 +147,7 @@ const TerminosCondiciones = () => {
                             </li>
 
                             <li>
-                                La invitación estará disponible el tiempo acordado en la reunión mencionada en el punto B de la sección 2. Una vez que la invitación deje de estar disponible, el usuario no podrá acceder a la invitación y los invitados tampoco podrán acceder a la invitación.
+                                La invitación estará disponible dentro de la plataforma el tiempo acordado en la reunión mencionada en el punto B de la sección 2.
                             </li>
 
                             <li>
@@ -168,7 +168,7 @@ const TerminosCondiciones = () => {
                     <p>
                         <ol className={styles.alfabetica}>
                             <li>
-                                Part.e se compromete a entregar la invitación en la fecha y hora acordada con el usuario. Si por alguna razón la invitación no se puede entregar en la fecha y hora acordada, se le notificará al usuario y se acordará una nueva fecha de entrega. Se le descontará un 10% del costo total de la invitación al usuario por el retraso.
+                                Part.e se compromete a entregar la invitación en la fecha acordada con el usuario. Si por alguna razón la invitación no se puede entregar en la fecha acordada, se le notificará al usuario y se acordará una nueva fecha de entrega. Se le descontará un 10% del costo total de la invitación al usuario por el retraso.
                             </li>
 
                             <li>
@@ -180,7 +180,7 @@ const TerminosCondiciones = () => {
                             </li>
 
                             <li>
-                                Cualquier cambio en los términos y condiciones de esta página será notificado al usuario por medio del correo electrónico proporcionado por el usuario al momento de registrarse en la plataforma, así como en la página <a href="/Inicio"> Inicio </a>.
+                                Cualquier cambio en los términos y condiciones de esta página será notificado al usuario por medio del correo electrónico proporcionado por el usuario al momento de registrarse en la plataforma, así como en la página <a href="/Inicio" target="_blank" rel="noopener noreferrer"> Inicio </a>.
                             </li>
                         </ol>
                     </p>
@@ -201,7 +201,7 @@ const TerminosCondiciones = () => {
                             </li>
                             
                             <li>
-                                El usuario se compromete a seguir al pie de la letra los términos y condiciones mencionados en esta página, si el usuario no sigue los términos y condiciones, se le negará el servicio.
+                                El usuario se compromete a seguir al pie de la letra los términos y condiciones mencionados en esta página, si el usuario no sigue los términos y condiciones, se le negará el servicio y de ser necesario se tomarán acciones legales en contra del usuario.
                             </li>
                         </ol>
                     </p>
