@@ -24,7 +24,7 @@ export const register = async (req, res) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'none', // Necesario para permitir la cookie en diferentes dominios
-            maxAge: 1000 * 60 * 60 * 24 * 7
+            maxAge: 1000 * 60 * 60 * 24
         })
 
         //Enviando datos utilizados en el frontend
@@ -34,7 +34,8 @@ export const register = async (req, res) => {
             email:userSaved.email,
             phoneNumber: userSaved.phoneNumber,
             createdAt: userSaved.createdAt,
-            updatedAt: userSaved.updatedAt
+            updatedAt: userSaved.updatedAt,
+            token
         })
     } catch (error) {
         res.status(500).json({message: error.message})
@@ -60,7 +61,7 @@ export const login = async (req, res) => {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
             sameSite: 'none', // Necesario para permitir la cookie en diferentes dominios
-            maxAge: 1000 * 60 * 60 * 24 * 7
+            maxAge: 1000 * 60 * 60 * 24
         });
 
         //Enviando datos utilizados en el frontend
@@ -69,7 +70,8 @@ export const login = async (req, res) => {
             username:userFound.username,
             email:userFound.email,
             createdAt: userFound.createdAt,
-            updatedAt: userFound.updatedAt
+            updatedAt: userFound.updatedAt,
+            token
         })
     } catch (error) {
         res.status(500).json({message: error.message})

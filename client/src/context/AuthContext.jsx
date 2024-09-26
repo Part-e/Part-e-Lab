@@ -23,7 +23,15 @@ export const AuthProvider = ({ children }) => {
     const signup = async (user) => {
         try {
             const res = await registerRequest(user);
-            // console.log(res.data);
+            
+            const { token } = res.data;
+            
+            // Guardar el token en localStorage
+            localStorage.setItem('token', token);
+
+            // Guardar el token también en cookies si aún lo necesitas
+            Cookies.set('token', token);
+            
             setIsAuthenticated(true);
             setUser(res.data)
         } catch (error) {
@@ -34,7 +42,15 @@ export const AuthProvider = ({ children }) => {
     const signin = async (user) => {
         try {
             const res = await loginRequest(user);
-            // console.log(res.data);
+            
+            const { token } = res.data;
+            
+            // Guardar el token en localStorage
+            localStorage.setItem('token', token);
+
+            // Guardar el token también en cookies si aún lo necesitas
+            Cookies.set('token', token);
+
             setIsAuthenticated(true);
             setUser(res.data)
         } catch (error) {
@@ -47,6 +63,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         Cookies.remove('token');
+        localStorage.removeItem('token'); // Eliminar el token de localStorage
         setIsAuthenticated(false);
         setUser(null);
     }
@@ -125,16 +142,17 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         async function checkLogin(){
-            const cookies = Cookies.get();
+            // Recupera el token de localStorage
+            const token = localStorage.getItem('token');
 
-            if(!cookies.token){ //Comprobando si hay token
+            if(!token){ //Comprobando si hay token
                 setIsAuthenticated(false);
                 setLoading(false);
                 return setUser(null);
             }
             
             try {
-                const res = await verifyTokenRequest(cookies.token)
+                const res = await verifyTokenRequest(token)
                 if(!res.data) {
                     setIsAuthenticated(false);
                     setLoading(false);
